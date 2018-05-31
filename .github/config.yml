@@ -33,3 +33,5 @@ newPRWelcomeComment: >
   further discussion, then click the big green 'Publish' button on top of the page.
   That will send all your comments back as one big comment to this PR.
   You find Reviewable if you click on the big purple Reviewable-button in the PR description.
+
+firstPRMergeComment:
