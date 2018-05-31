@@ -1,0 +1,14 @@
+# List of contexts (i.e. apps) and their corresponding statuses
+when:
+  # Allowed statuses are:
+  #
+  #   - success
+  #   - failure
+  #   - pending
+  #   - error
+  #license/cla: success
+  #continuous-integration/appveyor/pr: success
+  wip: success
+
+# Override default label (optional)
+label: Needs review
