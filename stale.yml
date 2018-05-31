@@ -15,7 +15,9 @@ pulls:
     abandoned label will be removed if work on the PR is taken up again.
 
   staleLabel: abandoned
-  exemptLabels: needs review
+  exemptLabels:
+    - needs review
+    - on hold
 
 # issues:
 #   exemptProjects: true
@@ -49,4 +51,4 @@ pulls:
 
 #   # Comment to post when removing the stale label.
 #   # unmarkComment: >
-  #   Your comment here.
+#   #   Your comment here.
