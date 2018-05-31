@@ -34,4 +34,5 @@ newPRWelcomeComment: >
   That will send all your comments back as one big comment to this PR.
   You find Reviewable if you click on the big purple Reviewable-button in the PR description.
 
-firstPRMergeComment:
+firstPRMergeComment: >
+  Thanks for contributing!
