@@ -6,8 +6,8 @@ when:
   #   - failure
   #   - pending
   #   - error
-  license/cla: success
-  continuous-integration/appveyor/pr: success
+  #license/cla: success
+  #continuous-integration/appveyor/pr: success
   wip: success
 
 # Override default label (optional)
