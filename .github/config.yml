@@ -1,0 +1,15 @@
+# https://github.com/sanbornhilland/label-issues-with-pull-request
+labelPullRequests:
+    # This label will be applied to issues addressed by an open PR.
+    labelName: in progress
+    # List of keywords that will trigger pull requests to be labeled.
+    keywords:
+      - Close
+      - Closes
+      - Closed
+      - Fix
+      - Fixes
+      - Fixed
+      - Resolve
+      - Resolves
+      - Resolved
