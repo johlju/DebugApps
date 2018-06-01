@@ -19,36 +19,39 @@ pulls:
     - needs review
     - on hold
 
-# issues:
-#   exemptProjects: true
-#   exemptMilestones: true
+issues:
+  exemptProjects: true
+  exemptMilestones: true
 
-#   exemptLabels:
-#     - bug
-#     - enhancement
-#     - tests
-#     - documentation
-#     - on hold
-#     - needs investigating
-#     - in progress
+  exemptLabels:
+    - bug
+    - enhancement
+    - tests
+    - documentation
+    - on hold
+    - needs investigating
+    - new module submission
+    - module proposal
 
-#   daysUntilStale: 1
-#   daysUntilClose: 2
+  daysUntilStale: 1
+  daysUntilClose: 2
 
-#   # Label to use when marking as stale
-#   staleLabel: needs more information
+  # Label to use when marking as stale
+  staleLabel: needs more information
 
-#   # Comment to post when marking as stale. Set to `false` to disable
-#   markComment: >
-#     This issue has been automatically marked as needs more information because
-#     it has not had activity from the community in the last 30 days. It will be
-#     closed if no further activity occurs within 10 days.
+  # Comment to post when marking as stale. Set to `false` to disable
+  markComment: >
+    This issue has been automatically marked as needs more information because
+    it has not had activity from the community in the last 30 days. It will be
+    closed if no further activity occurs within 10 days. If the issue is label
+    with any of the work labels (e.g bug, enhancement) the issue will not
+    auto-close.
 
-#   # Comment to post when closing a stale Issue or Pull Request.
-#   closeComment: >
-#     This issue has be automatically close because it is has not had activity from
-#     the community in the last 40 days.
+  # Comment to post when closing a stale Issue or Pull Request.
+  closeComment: >
+    This issue has be automatically close because it is has not had activity from
+    the community in the last 40 days.
 
-#   # Comment to post when removing the stale label.
-#   # unmarkComment: >
-#   #   Your comment here.
+  # Comment to post when removing the stale label.
+  # unmarkComment: >
+  #   Your comment here.
