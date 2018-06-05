@@ -1,26 +1,9 @@
-# Status can be set to either: success, failure, pending or error
+# Status can be set to either: success, failure, pending, error or missing.
 
+onStatusChange:
 - when:
     statuses:
-      cla-bot: failure
-
-    label: waiting for CLA pass
-
-    # Optional comment written when setting the label
-    commentWhenSettingLabel: >
-      Waiting for...
-      When signed the..
-
-    # Optional, removes all of these labels when setting 'label:'.
-    removeLabels:
-      - needs review
-      - waiting for code fix
-
-- when:
-    statuses:
-      continuous-integration/travis-ci/pr: failure
-      cla-bot: success
-      wip: success
+      WIP: pending
 
     label: waiting for code fix
 
@@ -31,15 +14,25 @@
       - needs review
       - waiting for CLA pass
 
-
 - when:
     statuses:
-      continuous-integration/travis-ci/pr: success
-      cla-bot: success
-      wip: success
+      code-review/reviewable: pending
+      WIP: success
 
     label: needs review
 
     removeLabels:
       - waiting for code fix
       - waiting for CLA pass
+
+- when:
+    statuses:
+      code-review/reviewable: success
+      WIP: success
+
+    label: ready to merge
+
+    removeLabels:
+      - waiting for code fix
+      - waiting for CLA pass
+      - needs review
