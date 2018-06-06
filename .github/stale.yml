@@ -1,57 +1,46 @@
 # Configuration for probot-stale - https://github.com/probot/stale
 
-# Limit the number of actions per hour, from 1-30. Default is 30
 limitPerRun: 30
 
-# Optionally, specify configuration settings that are specific to just 'issues' or 'pulls':
 pulls:
+  daysUntilStale: 1
+  daysUntilClose: false
   exemptProjects: true
   exemptMilestones: true
-  daysUntilStale: 1
-
-  markComment: >
-    Labeling this PR as abandoned since it has gone 14 days or more since the
-    last update. An abandoned PR can be continued by another contributor. The
-    abandoned label will be removed if work on the PR is taken up again.
-
   staleLabel: abandoned
   exemptLabels:
     - needs review
     - on hold
+    - waiting for CLA pass
+
+  markComment: >
+    Labeling this pull request (PR) as abandoned since it has gone 14 days or more
+    since the last update. An abandoned PR can be continued by another contributor.
+    The abandoned label will be removed if work on this PR is taken up again.
 
 issues:
+  daysUntilStale: 1
+  daysUntilClose: 2
   exemptProjects: true
   exemptMilestones: true
-
+  staleLabel: needs more information
   exemptLabels:
     - bug
     - enhancement
     - tests
     - documentation
+    - resource proposal
     - on hold
-    - needs investigating
     - new module submission
     - module proposal
 
-  daysUntilStale: 1
-  daysUntilClose: 2
-
-  # Label to use when marking as stale
-  staleLabel: needs more information
-
-  # Comment to post when marking as stale. Set to `false` to disable
   markComment: >
     This issue has been automatically marked as needs more information because
     it has not had activity from the community in the last 30 days. It will be
-    closed if no further activity occurs within 10 days. If the issue is label
-    with any of the work labels (e.g bug, enhancement) the issue will not
-    auto-close.
+    closed if no further activity occurs within 10 days. If the issue is labelled
+    with any of the work labels (e.g bug, enhancement, documentation, or tests)
+    then the issue will not auto-close.
 
-  # Comment to post when closing a stale Issue or Pull Request.
   closeComment: >
-    This issue has be automatically close because it is has not had activity from
-    the community in the last 40 days.
-
-  # Comment to post when removing the stale label.
-  # unmarkComment: >
-  #   Your comment here.
+    This issue has been automatically closed because it is has not had activity
+    from the community in the last 40 days.
