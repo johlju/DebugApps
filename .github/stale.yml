@@ -3,7 +3,6 @@
 limitPerRun: 30
 
 pulls:
-  only: pulls
   daysUntilStale: 1
   daysUntilClose: false
   exemptProjects: true
@@ -20,7 +19,6 @@ pulls:
     The abandoned label will be removed if work on this PR is taken up again.
 
 issues:
-  only: issues
   daysUntilStale: 1
   daysUntilClose: 2
   exemptProjects: true
