@@ -40,7 +40,9 @@ onStatusChange:
 onIssueOpen:
 - when:
     labels: false
-    exemptLabels: false
+    exemptLabels: 
+      - breaking change
+      
     do:
       setLabels:
         - question
@@ -58,6 +60,7 @@ onIssueOpen:
     exemptLabels: false
     authorAssociations:
       - owner
+      
     do:
       setLabels: false
       removeLabels: false
