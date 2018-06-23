@@ -39,16 +39,25 @@ onStatusChange:
 
 onIssueOpen:
 - when:
-    setLabels:
-      - question
-
-    commentWhenSettingLabel: >
-      A maintainer will look at this as soon as possible.
-
-    comment: >
-      Thank you for submittinhg an issue to this repository!
-      This issue has been added to the backlog on the Waffle board.
-
-    removeLabels: false
-
+    labels: false
     exemptLabels: false
+    do:
+      setLabels:
+        - question
+
+      commentWhenSettingLabel: >
+        A maintainer will look at this as soon as possible.
+
+      comment: >
+        Thank you for submitting an issue to this repository!
+        This issue has been added to the backlog on the Waffle board.
+
+      removeLabels: false
+- when:
+    labels: false
+    exemptLabels: false
+    authorAssociations:
+      - owner
+    do:
+      setLabels: false
+      removeLabels: false
