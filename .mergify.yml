@@ -12,7 +12,7 @@ rules:
         - WIP
       restrictions: null
       enforce_admins: true
-    enabling_label: ready to merge
+    enabling_label: ready for merge
     disabling_label: waiting for CLA pass
     disabling_files:
     - .mergify.yml
