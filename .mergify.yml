@@ -1,0 +1,23 @@
+# https://doc.mergify.io/configuration.html
+rules:
+  default:
+    protection:
+      required_pull_request_reviews:
+        require_code_owner_reviews: false
+        dismiss_stale_reviews: true
+        required_approving_review_count: 1
+      required_status_checks:
+        strict: true
+        contexts:
+        - WIP
+      restrictions: null
+      enforce_admins: true
+    enabling_label: ready for merge
+    disabling_label: waiting for CLA pass
+    disabling_files:
+    - .mergify.yml
+    - appveyor.yml
+    merge_strategy:
+      method: squash
+      rebase_fallback: none
+    automated_backport_labels: null
