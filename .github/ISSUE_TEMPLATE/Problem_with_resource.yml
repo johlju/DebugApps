@@ -49,10 +49,7 @@ body:
       description: |
         Please provide as much as possible about the target node, for example edition, version, build, and language.
 
-        On OS with WMF 5.1 the following command can help get this information:
-        ```powershell
-        Get-ComputerInfo -Property @('OsName','OsOperatingSystemSKU','OSArchitecture','WindowsVersion','WindowsBuildLabEx','OsLanguage','OsMuiLanguages')
-        ```
+        On OS with WMF 5.1 the following command can help get this information: `Get-ComputerInfo -Property @('OsName','OsOperatingSystemSKU','OSArchitecture','WindowsVersion','WindowsBuildLabEx','OsLanguage','OsMuiLanguages')`
       placeholder: |
         Add operating system information here
       render: text
