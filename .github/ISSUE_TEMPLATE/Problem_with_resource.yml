@@ -22,7 +22,7 @@ body:
     attributes:
       label: Verbose logs
       description: |
-        Verbose logs showing the problem. NOTE! Sensitive information should be obfuscated.
+        Verbose logs showing the problem. **NOTE! Sensitive information should be obfuscated.**
       render: text
     validations:
       required: true
@@ -31,7 +31,7 @@ body:
     attributes:
       label: DSC configuration
       description: |
-        The DSC configuration that is used to reproduce the issue (as detailed as possible). NOTE! Sensitive information should be obfuscated.
+        The DSC configuration that is used to reproduce the issue (as detailed as possible). **NOTE! Sensitive information should be obfuscated.**
       render: powershell
     validations:
       required: true
