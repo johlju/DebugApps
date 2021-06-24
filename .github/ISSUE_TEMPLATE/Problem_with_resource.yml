@@ -1,6 +1,6 @@
 name: Problem with a resource
 description: If you have a problem, bug, or enhancement with a resource in this resource module.
-title: "ResourceName: "
+title: ""
 labels: []
 assignees: []
 body:
