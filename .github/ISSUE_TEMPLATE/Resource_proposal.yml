@@ -13,7 +13,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: description
+      label: Resource proposal
       description: Provide information how this resource will/should work and how it will help users.
     validations:
       required: true
@@ -30,7 +30,7 @@ body:
     attributes:
       label: Special considerations or limitations
       description: |
-        The DSC configuration that is used to reproduce the issue (as detailed as possible). **NOTE! Sensitive information should be obfuscated.**
+        Provide any considerations or limitations you can think of that a contributor should take in account when coding the proposed resource, and or what limitations a user will encounter or should consider when using the proposed resource.
       render: powershell
     validations:
       required: true
