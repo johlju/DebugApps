@@ -7,10 +7,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        Your feedback and support is greatly appreciated, thanks for contributing!
-
         Please prefix the issue title (above) with the resource name, e.g.
         'ResourceName: Short description of my issue'!
+
+        Your feedback and support is greatly appreciated, thanks for contributing!
   - type: textarea
     id: description
     attributes:
