@@ -77,5 +77,6 @@ body:
         To help with this information, please run this command: `Get-Module -Name 'DnsServerDsc' -ListAvailable | ft Name,Version,Path`
       placeholder: |
         Add module information here
+      render: text
     validations:
       required: true
