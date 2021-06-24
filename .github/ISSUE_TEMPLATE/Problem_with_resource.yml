@@ -7,8 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please prefix the issue title (above) with the resource name, e.g.
-        'ResourceName: Short description of my issue'!
+        Please prefix the issue title (above) with the resource name, e.g. 'ResourceName: Short description of my issue'!
 
         Your feedback and support is greatly appreciated, thanks for contributing!
   - type: textarea
@@ -23,8 +22,7 @@ body:
     attributes:
       label: Verbose logs
       description: |
-        Verbose logs showing the problem.
-        NOTE! Sensitive information should be obfuscated.
+        Verbose logs showing the problem. NOTE! Sensitive information should be obfuscated.
       render: text
     validations:
       required: true
@@ -33,8 +31,7 @@ body:
     attributes:
       label: DSC configuration
       description: |
-        The DSC configuration that is used to reproduce the issue (as detailed as possible).
-        NOTE! Sensitive information should be obfuscated.
+        The DSC configuration that is used to reproduce the issue (as detailed as possible). NOTE! Sensitive information should be obfuscated.
       render: powershell
     validations:
       required: true
@@ -48,13 +45,12 @@ body:
   - type: textarea
     id: targetNodeOS
     attributes:
-      label: The operating system the target node is running
+      label: Operating system the target node is running
       description: |
-        Please provide as much as possible about the target node, for example edition,
-        version, build, and language.
-      placeholder: |
+        Please provide as much as possible about the target node, for example edition, version, build, and language.
         On OS with WMF 5.1 the following command can help get this information.
 
+        ```powershell
         Get-ComputerInfo -Property @(
             'OsName',
             'OsOperatingSystemSKU',
@@ -64,6 +60,8 @@ body:
             'OsLanguage',
             'OsMuiLanguages'
         )
+        ```
+      render: text
     validations:
       required: true
   - type: textarea
@@ -72,10 +70,12 @@ body:
       label: PowerShell version and build the target node is running
       description: |
         Please provide the version and build of PowerShell the target node is running.
-      placeholder: |
         To help with this information, please run this command:
 
+        ```powershell
         $PSVersionTable
+        ```
+      render: text
     validations:
       required: true
   - type: input
@@ -84,9 +84,11 @@ body:
       label: DSC module version
       description: |
         Please provide the version of the DSC module that was used.
-      placeholder: |
         To help with this information, please run this command:
 
+        ```powershell
         Get-Module -Name 'DnsServerDsc' -ListAvailable | ft Name,Version,Path
+        ```
+      render: text
     validations:
       required: true
