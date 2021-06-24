@@ -1,0 +1,36 @@
+name: New resource proposal
+description: If you have a new resource proposal that you think should be added to this resource module.
+title: "NewResourceName: New resource proposal"
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please replace `NewResourceName` in the issue title (above) with your proposed resource name.
+
+        Thank you for contributing and making this resource module better!
+  - type: textarea
+    id: description
+    attributes:
+      label: description
+      description: Provide information how this resource will/should work and how it will help users.
+    validations:
+      required: true
+  - type: textarea
+    id: proposedProperties
+    attributes:
+      label: Proposed properties
+      description: |
+        List all the proposed properties that the resource should have (key, required, write, and/or read).
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Special considerations or limitations
+      description: |
+        The DSC configuration that is used to reproduce the issue (as detailed as possible). **NOTE! Sensitive information should be obfuscated.**
+      render: powershell
+    validations:
+      required: true
