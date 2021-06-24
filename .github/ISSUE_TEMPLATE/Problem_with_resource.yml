@@ -67,7 +67,7 @@ body:
       render: text
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: moduleVersion
     attributes:
       label: DnsServerDsc version
@@ -75,5 +75,7 @@ body:
         Please provide the version of the DnsServerDsc module that was used.
 
         To help with this information, please run this command: `Get-Module -Name 'DnsServerDsc' -ListAvailable | ft Name,Version,Path`
+      placeholder: |
+        Add module information here
     validations:
       required: true
