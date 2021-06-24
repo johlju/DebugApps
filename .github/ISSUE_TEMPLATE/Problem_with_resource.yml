@@ -54,8 +54,7 @@ body:
         Get-ComputerInfo -Property @('OsName','OsOperatingSystemSKU','OSArchitecture','WindowsVersion','WindowsBuildLabEx','OsLanguage','OsMuiLanguages')
         ```
       placeholder: |
-        Windows Server 2019
-        ...
+        Add operating system information here
       render: text
     validations:
       required: true
@@ -71,8 +70,7 @@ body:
         $PSVersionTable
         ```
       placeholder: |
-        Windows PowerShell 5.1
-        ...
+        Add PowerShell information here
       render: text
     validations:
       required: true
@@ -87,7 +85,5 @@ body:
         ```powershell
         Get-Module -Name 'DnsServerDsc' -ListAvailable | ft Name,Version,Path
         ```
-      placeholder: |
-        x.y.z
     validations:
       required: true
