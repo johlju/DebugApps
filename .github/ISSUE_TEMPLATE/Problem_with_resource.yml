@@ -89,6 +89,5 @@ body:
         ```powershell
         Get-Module -Name 'DnsServerDsc' -ListAvailable | ft Name,Version,Path
         ```
-      render: text
     validations:
       required: true
