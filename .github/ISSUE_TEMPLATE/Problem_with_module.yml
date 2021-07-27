@@ -11,7 +11,7 @@ body:
         Your feedback and support is greatly appreciated, thanks for contributing!
 
         Please provide information regarding your issue under each section below.
-        Write N/A in sections that do not apply, or if the information is not available.
+        **Write N/A in sections that do not apply, or if the information is not available.**
   - type: textarea
     id: description
     attributes:
