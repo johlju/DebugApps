@@ -10,13 +10,13 @@ body:
 
         Your feedback and support is greatly appreciated, thanks for contributing!
 
-        Please provide information regarding your issue under each header below.
+        Please provide information regarding your issue under each section below.
         Write N/A in sections that do not apply, or if the information is not available.
   - type: textarea
     id: description
     attributes:
       label: Problem description
-      description: Details of the scenario you tried and the problem that is occurring
+      description: Details of the scenario you tried and the problem that is occurring, or the enhancement you are suggesting.
     validations:
       required: true
   - type: textarea
