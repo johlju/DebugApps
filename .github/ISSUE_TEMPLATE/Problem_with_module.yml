@@ -29,14 +29,14 @@ body:
         Paste verbose logs here
       render: text
     validations:
-      required: false
+      required: true
   - type: textarea
     id: reproducible
     attributes:
       label: How to reproduce
-      description: Steps to reproduce the problem.
+      description: Provide the steps to reproduce the problem.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: expectedBehavior
     attributes:
@@ -57,7 +57,7 @@ body:
       label: Suggested solution
       description: Do you have any suggestions how to solve the issue?
     validations:
-      required: false
+      required: true
   - type: textarea
     id: targetNodeOS
     attributes:
@@ -89,7 +89,7 @@ body:
   - type: textarea
     id: moduleVersion
     attributes:
-      label: Sampler version
+      label: Module version used
       description: |
         Please provide the version of the Sampler module that was used. _Will be automatically formatted as plain text._
 
