@@ -29,26 +29,26 @@ body:
         Paste verbose logs here
       render: text
     validations:
-      required: true
+      required: false
   - type: textarea
     id: reproducible
     attributes:
       label: How to reproduce
-      description: Steps to reproduce the problem
+      description: Steps to reproduce the problem.
     validations:
-      required: true
+      required: false
   - type: textarea
     id: expectedBehavior
     attributes:
       label: Expected behavior
-      description: Describe what you expected to happen
+      description: Describe what you expected to happen.
     validations:
       required: true
   - type: textarea
     id: currentBehavior
     attributes:
       label: Current behavior
-      description: Describe what is happening
+      description: Describe what actually happens.
     validations:
       required: true
   - type: textarea
@@ -57,7 +57,7 @@ body:
       label: Suggested solution
       description: Do you have any suggestions how to solve the issue?
     validations:
-      required: true
+      required: false
   - type: textarea
     id: targetNodeOS
     attributes:
