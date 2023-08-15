@@ -22,7 +22,8 @@ body:
       label: Verbose logs
       description: |
         Verbose logs showing the problem.
-        >**NOTE! Sensitive information should be obfuscated.** _Will be automatically formatted as plain text._
+        > [!NOTE]
+        > **Sensitive information should be obfuscated.** _Will be automatically formatted as plain text._
       placeholder: |
         Paste verbose logs here
       render: text
