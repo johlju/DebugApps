@@ -9,15 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run Relabeler
-      uses: viscalyx/relabeler@main
-      with:
-        repositoryToken: ${{ secrets.GITHUB_TOKEN }}
-        configPath: ./relabeler-config.yml
-        who-to-greet: ${{ github.actor }}
-
     - name: Add "blocking release" label
-      if: github.event.action == 'opened'
+      if: github.event.action == 'opened' || github.event.action == 'reopened'
       uses: actions/github-script@v6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,3 +21,10 @@ jobs:
             issue_number: context.issue.number,
             labels: ['blocking release']
           })
+
+    - name: Run Relabeler
+      uses: viscalyx/relabeler@main
+      with:
+        repositoryToken: ${{ secrets.GITHUB_TOKEN }}
+        configPath: ./relabeler-config.yml
+        who-to-greet: ${{ github.actor }}
