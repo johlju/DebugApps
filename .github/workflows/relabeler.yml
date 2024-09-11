@@ -12,5 +12,5 @@ jobs:
     - name: Run Relabeler
       uses: viscalyx/relabeler@main
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repositoryToken: ${{ secrets.GITHUB_TOKEN }}
         configPath: ./relabeler-config.yml
