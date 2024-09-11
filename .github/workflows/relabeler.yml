@@ -22,9 +22,9 @@ jobs:
             labels: ['blocking release']
           })
 
-    # - name: Run Relabeler
-    #   uses: viscalyx/relabeler@main
-    #   with:
-    #     repositoryToken: ${{ secrets.GITHUB_TOKEN }}
-    #     #configPath: ./relabeler-config.yml
-    #     who-to-greet: ${{ github.actor }}
+    - name: Run Relabeler
+      uses: viscalyx/relabeler@main
+      with:
+        repositoryToken: ${{ secrets.GITHUB_TOKEN }}
+        #configPath: ./relabeler-config.yml
+        who-to-greet: ${{ github.actor }}
