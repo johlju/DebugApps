@@ -1,0 +1,16 @@
+name: Relabeler # cSpell: ignore Relabeler viscalyx
+
+on:
+  pull_request:
+    types: [opened, edited, closed, reopened, synchronize, labeled, unlabeled, ready_for_review, locked, unlocked, review_requested, review_request_removed]
+
+jobs:
+  relabel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run Relabeler
+      uses: viscalyx/relabeler@main
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        configPath: ./relabeler-config.yml

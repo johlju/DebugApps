@@ -1,3 +1,3 @@
 # DebugApps
-Temporary repository to debug GitHub Apps
-Testar igen
+
+Temporary repository to debug GitHub Apps and GitHub Actions.
