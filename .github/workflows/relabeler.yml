@@ -26,5 +26,5 @@ jobs:
       uses: viscalyx/relabeler@main
       with:
         repositoryToken: ${{ secrets.GITHUB_TOKEN }}
-        configPath: ./relabeler-config.yml
+        #configPath: ./relabeler-config.yml
         who-to-greet: ${{ github.actor }}
