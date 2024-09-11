@@ -15,12 +15,11 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { github } = require('@actions/github');
           await github.issues.addLabels({
             owner: context.repo.owner,
             repo: context.repo.repo,
             issue_number: context.issue.number,
-            labels: ['need review']
+            labels: ['blocking release']
           })
 
     - name: Run Relabeler
