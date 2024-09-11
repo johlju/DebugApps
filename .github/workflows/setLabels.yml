@@ -1,0 +1,23 @@
+name: Relabeler # cSpell: ignore Relabeler viscalyx
+
+on:
+  pull_request:
+    types: [opened, edited, closed, reopened, synchronize, labeled, unlabeled, ready_for_review, locked, unlocked, review_requested, review_request_removed]
+
+jobs:
+  relabel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Add "blocking release" label
+      if: github.event.action == 'opened' || github.event.action == 'reopened'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: | # https://github.com/actions/github-script?tab=readme-ov-file#apply-a-label-to-an-issue
+          await github.rest.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            labels: ['blocking release']
+          })
