@@ -1,0 +1,20 @@
+name: Relabeler # cSpell: ignore Relabeler viscalyx
+
+on:
+  pull_request:
+    types: [opened, edited, closed, reopened, synchronize, labeled, unlabeled, ready_for_review, locked, unlocked, review_requested, review_request_removed]
+
+jobs:
+  relabel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository # Need to checkout to get the relabeler-config.yml file
+      uses: actions/checkout@v2
+
+    # - name: Run Relabeler
+    #   uses: viscalyx/relabeler@main
+    #   with:
+    #     repositoryToken: ${{ secrets.GITHUB_TOKEN }}
+    #     #configPath: ./relabeler-config.yml
+    #     who-to-greet: ${{ github.actor }}

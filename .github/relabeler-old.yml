@@ -1,0 +1,66 @@
+# Status can be set to either: success, failure, pending, error or missing.
+
+onStatusChange:
+- when:
+    statuses:
+      WIP: pending
+
+    label: waiting for code fix
+
+    commentWhenSettingLabel: >
+      CI pipeline failed...
+
+    removeLabels:
+      - needs review
+      - waiting for CLA pass
+
+- when:
+    statuses:
+      code-review/reviewable: pending
+      WIP: success
+
+    label: needs review
+
+    removeLabels:
+      - waiting for code fix
+      - waiting for CLA pass
+
+- when:
+    statuses:
+      code-review/reviewable: success
+      WIP: success
+
+    label: ready to merge
+
+    removeLabels:
+      - waiting for code fix
+      - waiting for CLA pass
+      - needs review
+
+onIssueOpen:
+- when:
+    labels: false
+    exemptLabels: 
+      - breaking change
+      
+    do:
+      setLabels:
+        - question
+
+      commentWhenSettingLabel: >
+        A maintainer will look at this as soon as possible.
+
+      comment: >
+        Thank you for submitting an issue to this repository!
+        This issue has been labeled as a question.
+
+      removeLabels: false
+- when:
+    labels: false
+    exemptLabels: false
+    authorAssociations:
+      - owner
+      
+    do:
+      setLabels: false
+      removeLabels: false
