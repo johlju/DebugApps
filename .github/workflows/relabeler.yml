@@ -15,7 +15,7 @@ jobs:
     - name: List files in GITHUB_WORKSPACE
       run: |
         sudo apt-get install tree -y
-        tree $GITHUB_WORKSPACE
+        tree -a -I '.git' $GITHUB_WORKSPACE
 
     - name: Run Relabeler
       uses: viscalyx/relabeler@main
