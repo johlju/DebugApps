@@ -12,6 +12,11 @@ jobs:
     - name: Checkout repository # Need to checkout to get the relabeler-config.yml file
       uses: actions/checkout@v4
 
+    - name: List files in GITHUB_WORKSPACE
+      run: |
+        sudo apt-get install tree -y
+        tree $GITHUB_WORKSPACE
+
     - name: Run Relabeler
       uses: viscalyx/relabeler@main
       with:
